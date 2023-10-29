@@ -26,6 +26,20 @@ console.log(
 );
 console.log(chalk.bold.underline(`ALL THE BEST ${userName} :)\n`));
 
+const leaderboard = [
+  { name: "Nisha", score: " 18" },
+  { name: "Gracy", score: " 10" },
+  { name: "Sonu", score: "15" },
+];
+
+console.log(chalk.yellowBright.underline("LeaderBoard:"));
+console.log(chalk.cyanBright("Name       Score"));
+for (let i = 0; i < leaderboard.length; i++) {
+  console.log(
+    chalk.greenBright(leaderboard[i].name, "   ", leaderboard[i].score)
+  );
+}
+
 // Array of questions.
 const questionList = [
   {
@@ -132,3 +146,19 @@ for (let i = 0; i < questionList.length; i++) {
     i
   );
 }
+
+// final message to the player
+console.log("\n");
+console.log(
+  chalk.cyanBright.italic.underline(
+    "Congratulations,",
+    userName,
+    "your Total Score is: ",
+    score
+  )
+);
+console.log(
+  chalk.whiteBright.italic(
+    "Thanks for Solving the Quiz,if you want to see your name on the Leader Board then Please take the Screenshot of the Score and Contact Aman from the Contact section."
+  )
+);
