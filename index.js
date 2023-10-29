@@ -81,9 +81,16 @@ const questionList = [
     answer: "Magneto",
     options: ["Cyclops", "Professor X", "Magneto", "Gambit"],
   },
+  {
+    question:
+      "What is the real name of the character who becomes the web-slinging superhero known as Spider-Man?",
+    answer: "Peter Parker",
+    options: ["Peter Parker", "Eddie Brock", "Miles Morales", "Ben Reilly"],
+  },
 ];
 
 // The main game logic
+let score = 0;
 function play(question, options, answer, questionNumber) {
   console.log(`${questionNumberText(`\nQuestion ${questionNumber + 1}`)}`);
   console.log(questionText(question));
@@ -96,12 +103,15 @@ function play(question, options, answer, questionNumber) {
   const userAnswer = readlineSync.question("");
 
   if (userAnswer.toUpperCase() === answer.toUpperCase()) {
+    score += 2;
     console.log(
       `${correctText("You got it right!")}\n${headingText(
         "####################"
       )}`
     );
+    console.log(chalk.cyan("The score is: " + score));
   } else {
+    score--;
     console.log(
       `${wrongText(`${userAnswer}, is incorrect!`)}\n${answerText(
         `The correct answer would be ${answer}\n${headingText(
@@ -109,6 +119,7 @@ function play(question, options, answer, questionNumber) {
         )}`
       )}`
     );
+    console.log(chalk.cyan("The score is: " + score));
   }
 }
 
