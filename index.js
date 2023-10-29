@@ -1,5 +1,7 @@
 import chalk, { colorNames } from "chalk";
 import readlineSync from "readline-sync";
+
+// storing custom chalk colors in variable to be used.
 const headingText = chalk.bold.white.bgCyan;
 const correctText = chalk.bold.green;
 const wrongText = chalk.strikethrough.red;
@@ -24,6 +26,7 @@ console.log(
 );
 console.log(chalk.bold.underline(`ALL THE BEST ${userName} :)\n`));
 
+// Array of questions.
 const questionList = [
   {
     question: 'Who is known as the "God of Thunder" in the Marvel Universe?',
@@ -80,6 +83,7 @@ const questionList = [
   },
 ];
 
+// The main game logic
 function play(question, options, answer, questionNumber) {
   console.log(`${questionNumberText(`\nQuestion ${questionNumber + 1}`)}`);
   console.log(questionText(question));
@@ -108,6 +112,7 @@ function play(question, options, answer, questionNumber) {
   }
 }
 
+// Looping through each of the question present and calling play function.
 for (let i = 0; i < questionList.length; i++) {
   play(
     questionList[i].question,
