@@ -1,0 +1,2 @@
+# Marvel-MCQ
+ Welcome to the "Marvel-MCQ" a CLI based game in JavaScript! This project is all about creating an engaging and interactive Multiple-Choice Question (MCQ) game using JavaScript, specifically designed for the Command Line Interface (CLI). This repository serves as the foundation for building an exciting and educational game where users can test their knowledge on Marvel characters through a series of multiple-choice questions.
