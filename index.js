@@ -33,10 +33,10 @@ const leaderboard = [
 ];
 
 console.log(chalk.yellowBright.underline("LeaderBoard:"));
-console.log(chalk.cyanBright("Name       Score"));
+console.log(chalk.cyanBright("Name\t\tScore"));
 for (let i = 0; i < leaderboard.length; i++) {
   console.log(
-    chalk.greenBright(leaderboard[i].name, "   ", leaderboard[i].score)
+    chalk.greenBright(leaderboard[i].name, "\t\t", leaderboard[i].score)
   );
 }
 
